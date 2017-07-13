@@ -68,7 +68,7 @@ invalid_addresses = %w[userexamplecom user_at_foo.org
     password = "5" * 5
     @user.password = @user.password_confirmation = password
     @user.save
-    assert_not @user.valid?
+              assert_not @user.valid?
   end
 
 end

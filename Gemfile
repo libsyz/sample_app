@@ -16,6 +16,8 @@ gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.6.1'
 gem 'bcrypt',       '3.1.11'
 gem 'bootstrap-sass', '3.3.7'
+gem "autoprefixer-rails"
+
 
 
 group :development, :test do
