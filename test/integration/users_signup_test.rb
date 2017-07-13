@@ -20,5 +20,22 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
       assert_select '.alert.alert-danger'
     end
 
-  end
+    test "signup form should accept valid info" do
+      get signup_path
+      assert_difference 'User.count' do
+        post users_path, params: {user: { name: "Miguel",
+          email: "user@valid.com",
+          password: "foobar",
+          password_confirmation: "foobar",
+          }}
+        end
+
+      follow_redirect!
+      assert_not flash.nil?
+
+
+      end
+
+
+    end
 
