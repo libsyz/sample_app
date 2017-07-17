@@ -172,6 +172,22 @@ input, textarea, select, .uneditable-input {
     height: auto !important;
   }
 
+  .checkbox-inline {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: -20px;
+    span {
+      margin-left: 20px;
+      font-weight: normal;
+    }
+  }
+
+
+#session_remember_me {
+  width: auto;
+  margin-left: 0;
+
+}
 
 // Error Messages
 
@@ -190,3 +206,5 @@ input, textarea, select, .uneditable-input {
     color: $state-danger-text;
   }
 }
+
+
