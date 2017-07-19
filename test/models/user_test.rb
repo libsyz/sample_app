@@ -71,6 +71,11 @@ invalid_addresses = %w[userexamplecom user_at_foo.org
               assert_not @user.valid?
   end
 
+  test "authenticated? should return false for a user with a nil digest" do
+  assert_not @user.authenticated?('')
+
+  end
+
 end
 
 
