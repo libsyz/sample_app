@@ -30,9 +30,9 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
           }}
         end
 
-      follow_redirect!
-      assert_not flash[:success].nil?
-      assert is_logged_in?
+      # follow_redirect!
+      # assert_not flash[:success].nil?
+      # assert is_logged_in?
 
 
       end
