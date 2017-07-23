@@ -11,7 +11,11 @@ User.create!(name:  "test",
              email: "t@t.t",
              password:              "foobar",
              password_confirmation: "foobar",
-             admin: true)
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
+
+puts "Test Admin Created"
 
 99.times do |n|
   name  = Faker::Name.name
@@ -20,5 +24,9 @@ User.create!(name:  "test",
   User.create!(name:  name,
                email: email,
                password:              password,
-               password_confirmation: password)
+               password_confirmation: password,
+               activated: true,
+               activated_at: Time.zone.now)
+  puts
+  puts "Fake User #{name} seeded successfully!"
 end
