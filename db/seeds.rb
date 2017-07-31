@@ -30,3 +30,13 @@ puts "Test Admin Created"
   puts
   puts "Fake User #{name} seeded successfully!"
 end
+
+
+users = User.order(:created_at).take(6)
+50.times do
+  content = Faker::Hipster.sentence(5)
+  users.each do |user|
+  user.microposts.create!(content: content)
+  puts "#{user.name} posted #{content} !"
+  end
+end

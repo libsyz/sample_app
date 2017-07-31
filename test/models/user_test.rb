@@ -76,6 +76,15 @@ invalid_addresses = %w[userexamplecom user_at_foo.org
 
   end
 
+   test "associated microposts should be destroyed" do
+    @user.save
+    @user.microposts.create(content: "Lorem Ipsum")
+    assert_difference 'Micropost.count', -1 do
+      @user.destroy
+    end
+
+  end
+
 end
 
 
