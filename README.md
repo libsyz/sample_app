@@ -13,7 +13,7 @@ is available jointly under the MIT License and the Beerware License. See
 
 ## Getting started
 
-To get started with the app, clone the repo and then install the needed gems:
+To get started with the app, clone the repo and then install the needed gems: Hurhurhur
 
 ```
 $ bundle install --without production
